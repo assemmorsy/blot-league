@@ -9,5 +9,11 @@
   },
   "devDependencies": {
     "nuxt": "^3.2.3"
+  },
+  "dependencies": {
+    "@nuxtjs/supabase": "^0.3.1",
+    "@prisma/client": "^4.11.0",
+    "@vueuse/nuxt": "^9.13.0",
+    "prisma": "^4.11.0"
   }
 }
