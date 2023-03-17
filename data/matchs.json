@@ -1,0 +1,462 @@
+[
+    {
+        "id": 1,
+        "team1Id": 5,
+        "team2Id": 3,
+        "tournament": 1,
+        "startAt": [
+            2023,
+            2,
+            23
+        ],
+        "type": "match"
+    },
+    {
+        "id": 2,
+        "team1Id": 1,
+        "team2Id": 4,
+        "tournament": 1,
+        "startAt": [
+            2023,
+            2,
+            25
+        ],
+        "type": "match"
+    },
+    {
+        "id": 3,
+        "team1Id": 2,
+        "team2Id": 6,
+        "tournament": 1,
+        "startAt": [
+            2023,
+            2,
+            27
+        ],
+        "type": "match"
+    },
+    {
+        "id": 4,
+        "tournament": 1,
+        "startAt": [
+            2023,
+            2,
+            29
+        ],
+        "type": "studio"
+    },
+    {
+        "id": 5,
+        "team1Id": 3,
+        "team2Id": 4,
+        "tournament": 2,
+        "startAt": [
+            2023,
+            2,
+            31
+        ],
+        "type": "match"
+    },
+    {
+        "id": 6,
+        "team1Id": 2,
+        "team2Id": 1,
+        "tournament": 2,
+        "startAt": [
+            2023,
+            3,
+            2
+        ],
+        "type": "match"
+    },
+    {
+        "id": 7,
+        "team1Id": 5,
+        "team2Id": 6,
+        "tournament": 2,
+        "startAt": [
+            2023,
+            3,
+            4
+        ],
+        "type": "match"
+    },
+    {
+        "id": 8,
+        "tournament": 2,
+        "startAt": [
+            2023,
+            3,
+            6
+        ],
+        "type": "studio"
+    },
+    {
+        "id": 9,
+        "team1Id": 1,
+        "team2Id": 3,
+        "tournament": 3,
+        "startAt": [
+            2023,
+            3,
+            8
+        ],
+        "type": "match"
+    },
+    {
+        "id": 10,
+        "team1Id": 6,
+        "team2Id": 4,
+        "tournament": 3,
+        "startAt": [
+            2023,
+            3,
+            10
+        ],
+        "type": "match"
+    },
+    {
+        "id": 11,
+        "team1Id": 2,
+        "team2Id": 5,
+        "tournament": 3,
+        "startAt": [
+            2023,
+            3,
+            12
+        ],
+        "type": "match"
+    },
+    {
+        "id": 12,
+        "tournament": 3,
+        "startAt": [
+            2023,
+            3,
+            14
+        ],
+        "type": "studio"
+    },
+    {
+        "id": 13,
+        "team1Id": 3,
+        "team2Id": 2,
+        "tournament": 4,
+        "startAt": [
+            2023,
+            3,
+            16
+        ],
+        "type": "match"
+    },
+    {
+        "id": 14,
+        "team1Id": 1,
+        "team2Id": 6,
+        "tournament": 4,
+        "startAt": [
+            2023,
+            3,
+            18
+        ],
+        "type": "match"
+    },
+    {
+        "id": 15,
+        "team1Id": 4,
+        "team2Id": 5,
+        "tournament": 4,
+        "startAt": [
+            2023,
+            3,
+            20
+        ],
+        "type": "match"
+    },
+    {
+        "id": 16,
+        "tournament": 4,
+        "startAt": [
+            2023,
+            3,
+            23
+        ],
+        "type": "studio"
+    },
+    {
+        "id": 17,
+        "team1Id": 2,
+        "team2Id": 4,
+        "tournament": 5,
+        "startAt": [
+            2023,
+            3,
+            26
+        ],
+        "type": "match"
+    },
+    {
+        "id": 18,
+        "team1Id": 6,
+        "team2Id": 3,
+        "tournament": 5,
+        "startAt": [
+            2023,
+            3,
+            30
+        ],
+        "type": "match"
+    },
+    {
+        "id": 19,
+        "team1Id": 5,
+        "team2Id": 1,
+        "tournament": 5,
+        "startAt": [
+            2023,
+            4,
+            3
+        ],
+        "type": "match"
+    },
+    {
+        "id": 20,
+        "tournament": 5,
+        "startAt": [
+            2023,
+            4,
+            7
+        ],
+        "type": "studio"
+    },
+    {
+        "id": 21,
+        "team1Id": 3,
+        "team2Id": 1,
+        "tournament": 6,
+        "startAt": [
+            2023,
+            4,
+            10
+        ],
+        "type": "match"
+    },
+    {
+        "id": 22,
+        "team1Id": 4,
+        "team2Id": 2,
+        "tournament": 6,
+        "startAt": [
+            2023,
+            4,
+            14
+        ],
+        "type": "match"
+    },
+    {
+        "id": 23,
+        "team1Id": 6,
+        "team2Id": 5,
+        "tournament": 6,
+        "startAt": [
+            2023,
+            4,
+            17
+        ],
+        "type": "match"
+    },
+    {
+        "id": 24,
+        "tournament": 6,
+        "startAt": [
+            2023,
+            4,
+            21
+        ],
+        "type": "studio"
+    },
+    {
+        "id": 25,
+        "team1Id": 6,
+        "team2Id": 1,
+        "tournament": 7,
+        "startAt": [
+            2023,
+            4,
+            24
+        ],
+        "type": "match"
+    },
+    {
+        "id": 26,
+        "team1Id": 4,
+        "team2Id": 3,
+        "tournament": 7,
+        "startAt": [
+            2023,
+            4,
+            28
+        ],
+        "type": "match"
+    },
+    {
+        "id": 27,
+        "team1Id": 5,
+        "team2Id": 2,
+        "tournament": 7,
+        "startAt": [
+            2023,
+            4,
+            31
+        ],
+        "type": "match"
+    },
+    {
+        "id": 28,
+        "tournament": 7,
+        "startAt": [
+            2023,
+            5,
+            4
+        ],
+        "type": "studio"
+    },
+    {
+        "id": 29,
+        "team1Id": 2,
+        "team2Id": 3,
+        "tournament": 8,
+        "startAt": [
+            2023,
+            5,
+            7
+        ],
+        "type": "match"
+    },
+    {
+        "id": 30,
+        "team1Id": 4,
+        "team2Id": 6,
+        "tournament": 8,
+        "startAt": [
+            2023,
+            5,
+            11
+        ],
+        "type": "match"
+    },
+    {
+        "id": 31,
+        "team1Id": 1,
+        "team2Id": 5,
+        "tournament": 8,
+        "startAt": [
+            2023,
+            5,
+            14
+        ],
+        "type": "match"
+    },
+    {
+        "id": 32,
+        "tournament": 8,
+        "startAt": [
+            2023,
+            5,
+            18
+        ],
+        "type": "studio"
+    },
+    {
+        "id": 33,
+        "team1Id": 6,
+        "team2Id": 2,
+        "tournament": 9,
+        "startAt": [
+            2023,
+            5,
+            21
+        ],
+        "type": "match"
+    },
+    {
+        "id": 34,
+        "team1Id": 3,
+        "team2Id": 5,
+        "tournament": 9,
+        "startAt": [
+            2023,
+            5,
+            25
+        ],
+        "type": "match"
+    },
+    {
+        "id": 35,
+        "team1Id": 4,
+        "team2Id": 1,
+        "tournament": 9,
+        "startAt": [
+            2023,
+            5,
+            28
+        ],
+        "type": "match"
+    },
+    {
+        "id": 36,
+        "tournament": 9,
+        "startAt": [
+            2023,
+            6,
+            2
+        ],
+        "type": "studio"
+    },
+    {
+        "id": 37,
+        "team1Id": 1,
+        "team2Id": 2,
+        "tournament": 10,
+        "startAt": [
+            2023,
+            6,
+            5
+        ],
+        "type": "match"
+    },
+    {
+        "id": 38,
+        "team1Id": 3,
+        "team2Id": 6,
+        "tournament": 10,
+        "startAt": [
+            2023,
+            6,
+            9
+        ],
+        "type": "match"
+    },
+    {
+        "id": 39,
+        "team1Id": 5,
+        "team2Id": 4,
+        "tournament": 10,
+        "startAt": [
+            2023,
+            6,
+            12
+        ],
+        "type": "match"
+    },
+    {
+        "id": 40,
+        "tournament": 10,
+        "startAt": [
+            2023,
+            6,
+            16
+        ],
+        "type": "studio"
+    }
+]
