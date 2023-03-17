@@ -117,8 +117,8 @@
     },
     {
         "id": 11,
-        "team1Id": 2,
-        "team2Id": 5,
+        "team1Id": 5,
+        "team2Id": 2,
         "tournament": 3,
         "startAt": [
             2023,
@@ -151,8 +151,8 @@
     },
     {
         "id": 14,
-        "team1Id": 1,
-        "team2Id": 6,
+        "team1Id": 6,
+        "team2Id": 1,
         "tournament": 4,
         "startAt": [
             2023,
@@ -185,8 +185,8 @@
     },
     {
         "id": 17,
-        "team1Id": 2,
-        "team2Id": 4,
+        "team1Id": 4,
+        "team2Id": 2,
         "tournament": 5,
         "startAt": [
             2023,
@@ -231,8 +231,8 @@
     },
     {
         "id": 21,
-        "team1Id": 3,
-        "team2Id": 1,
+        "team1Id": 1,
+        "team2Id": 3,
         "tournament": 6,
         "startAt": [
             2023,
@@ -255,8 +255,8 @@
     },
     {
         "id": 23,
-        "team1Id": 6,
-        "team2Id": 5,
+        "team1Id": 5,
+        "team2Id": 6,
         "tournament": 6,
         "startAt": [
             2023,
@@ -289,8 +289,8 @@
     },
     {
         "id": 26,
-        "team1Id": 4,
-        "team2Id": 3,
+        "team1Id": 3,
+        "team2Id": 4,
         "tournament": 7,
         "startAt": [
             2023,
@@ -323,8 +323,8 @@
     },
     {
         "id": 29,
-        "team1Id": 2,
-        "team2Id": 3,
+        "team1Id": 3,
+        "team2Id": 2,
         "tournament": 8,
         "startAt": [
             2023,
@@ -347,8 +347,8 @@
     },
     {
         "id": 31,
-        "team1Id": 1,
-        "team2Id": 5,
+        "team1Id": 5,
+        "team2Id": 1,
         "tournament": 8,
         "startAt": [
             2023,
@@ -381,8 +381,8 @@
     },
     {
         "id": 34,
-        "team1Id": 3,
-        "team2Id": 5,
+        "team1Id": 5,
+        "team2Id": 3,
         "tournament": 9,
         "startAt": [
             2023,
@@ -393,8 +393,8 @@
     },
     {
         "id": 35,
-        "team1Id": 4,
-        "team2Id": 1,
+        "team1Id": 1,
+        "team2Id": 4,
         "tournament": 9,
         "startAt": [
             2023,
@@ -427,8 +427,8 @@
     },
     {
         "id": 38,
-        "team1Id": 3,
-        "team2Id": 6,
+        "team1Id": 6,
+        "team2Id": 3,
         "tournament": 10,
         "startAt": [
             2023,
