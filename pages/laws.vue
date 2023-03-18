@@ -4,7 +4,7 @@
             <h2 class="accordion-header" id="panel-headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panel-collapseOne">
-                    <i class="bi bi-book mx-2 fs-4 head-icon"></i>
+                    <Icon name="ic:twotone-menu-book" size="25" class="mx-2 head-icon" />
                     قواعد اللعبة
                 </button>
             </h2>
@@ -27,7 +27,7 @@
             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseTwo">
-                    <i class="bi bi-clipboard fs-4 mx-2 head-icon"></i>
+                    <Icon name="material-symbols:library-books-outline" size="25" class="mx-2 head-icon" />
                     بنود عامة
                 </button>
             </h2>
@@ -46,7 +46,7 @@
             <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseThree">
-                    <i class="bi bi-person mx-2 fs-4 head-icon"></i>
+                    <Icon name="fluent-mdl2:decision-solid" size="25" class="mx-2 head-icon" />
                     حكام البطولة
                 </button>
             </h2>
@@ -63,16 +63,16 @@
                     <ol>
                         <li>حكم الطاولة هو المرجع للاعبين في حال الخلاف ولا يتدخل إلا بعد طلب اللاعبين الفصل بينهم.</li>
                         <li>حكم الطاولة يقوم بتسجيل النشرة بعد طلب تسجيلها من الفريق المشتري.</li>
-                        <li> حكام اللجنة تكمن مهمتهم بمتابعة مجريات اللعب و متابعة نشرة اللعب.</li>
-                        <li> في حال الخلاف بين أعضاء اللجنة في القرار يتم التصويت على القرار ويفصل بينهم قرار الحكم.</li>
+                        <li> الحكام المساعدين تكمن مهمتهم بمتابعة مجريات اللعب و متابعة نشرة اللعب.</li>
+                        <li> في حال الخلاف بين أعضاء الحكام في القرار يتم التصويت على القرار ويفصل بينهم قرار الحكم.</li>
                         <li>يحق للفريق لمرة واحدة في كل صكة طلب النظر في قرار الحكم و يحال القرار للجنة.</li>
                         <li> يحق للحكم الرجوع للجنة الحكم عندما يشاء للتأكد من قراره.</li>
+                        <li>الحكم المساعد (متابعة اللعب) يقبل تدخله في حالة الغش فقط.</li>
+                        <li>الحكم المساعد (متابعة النشرة) يقبل تدخله في حالة وجود خطأ بالنشرة.</li>
+                        <li>حالات توضيح اللعب أو الغش تعتبر قياسية لدى الحكم و يحق له رفضها في حال لم يرى فيها ما يؤثر على
+                            اللعب.</li>
                     </ol>
-                    <p>
-                        حكم اللجنة اشرحه اكثر وانهم مايتدخلون قبل النشرة
-                        الحالات اغلبه قياسية
-                        إذا أخطأ الحكم بالنشرة
-                    </p>
+
                 </div>
             </div>
         </div>
@@ -80,7 +80,8 @@
             <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseFour">
-                    <i class="bi bi-card-text fs-4 mx-2 head-icon"></i>
+                    <Icon name="mdi:cards" size="25" class="mx-2 head-icon" />
+
                     إجراءات الانذارات
                 </button>
             </h2>
@@ -94,7 +95,7 @@
                                     <button class="accordion-button " type="button" data-bs-toggle="collapse"
                                         data-bs-target="#panelsWarning-collapseOne">
                                         حالات الكرت الأصفر
-                                        <i class="bi bi-file-fill text-warning fs-4 ms-2"></i>
+                                        <Icon name="mdi:cards-outline" size="25" class="mx-2 text-warning" />
                                     </button>
                                 </h2>
                                 <div id="panelsWarning-collapseOne" class="accordion-collapse collapse show">
@@ -152,7 +153,7 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#panelsWarning-collapseTwo">
                                         إجراءات الكرت الأصفر
-                                        <i class="bi bi-file-fill text-warning fs-4 ms-2"></i>
+                                        <Icon name="fluent-mdl2:decision-solid" size="25" class="mx-2 text-warning" />
                                     </button>
                                 </h2>
                                 <div id="panelsWarning-collapseTwo" class="accordion-collapse collapse">
@@ -175,7 +176,7 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#panelsWarning-collapseThird">
                                         حالات الكرت الاحمر
-                                        <i class="bi bi-file-fill text-danger fs-4 ms-2"></i>
+                                        <Icon name="mdi:cards-outline" size="25" class="mx-2 text-danger" />
                                     </button>
                                 </h2>
                                 <div id="panelsWarning-collapseThird" class="accordion-collapse collapse">
@@ -258,7 +259,7 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#panelsWarning-collapseFour">
                                         إجراءات الكرت الأحمر
-                                        <i class="bi bi-file-fill text-danger fs-4 ms-2"></i>
+                                        <Icon name="fluent-mdl2:decision-solid" size="25" class="mx-2 text-danger" />
                                     </button>
                                 </h2>
                                 <div id="panelsWarning-collapseFour" class="accordion-collapse collapse">
@@ -384,8 +385,8 @@
             <h2 class="accordion-header" id="panelsStayOpen-headingFive">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseFive">
-                    <i class="bi bi-people mx-2 fs-4 head-icon"></i>
-                    اللاعبين
+                    <Icon name="ic:sharp-person" size="25" class="mx-2 head-icon" />
+                    اللاعبين / انتقالات اللاعبين
                 </button>
             </h2>
             <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse ">
@@ -414,43 +415,76 @@
             </div>
         </div>
         <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseSeven">
+                    <Icon name="ic:baseline-control-point-duplicate" size="25" class="mx-2 head-icon" />
+                    حساب النقاط و الأبناط و ترتيب الدوري
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse ">
+                <div class="accordion-body">
+                    <ol>
+                        <li> الفريق الفائز ب صكتين من أصل 3 صكات يحصل على 3 نقاط.</li>
+                        <li>الفريق المهزوم لا يحصل على أي نقاط.</li>
+                        <li>يتم احتساب جميع ابناط الصكات للفريق في حالة الفوز أو الخسارة و يتم قسمتها على عدد الصكات التي
+                            لعبها وفاز او انهزم فيها ليتم إخراج متوسط ابناط الفريق.</li>
+                        <li>في حال تعادل فريقين أو أكثر يتم ترتيب الدوري على حسب أكثر الفرق أبناط.</li>
+                        <li>في حال تعادل النقاط و الأبناط يتم الرجوع للمواجهات المباشرة و احتساب أكثر الفرق فوز بالصكات.
+                        </li>
+                        <li>في حال تعادل النقاط و الابناط و المواجهات المباشرة يتم حسم الدوري للفريق الأقل أكك في كافة
+                            الألعاب ماعدى الجولات التي يتم توريقها.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingSix">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseSix">
-                    <i class="bi bi-cursor-text fs-4 mx-2 head-icon"></i>
+                    <Icon name="ph:cursor-text" size="25" class="mx-2 head-icon" />
                     مصطلحات
                 </button>
             </h2>
             <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse ">
                 <div class="accordion-body">
-                    <ul>
-                        <li> <span class=" rounded-3 px-1 py-1 text-light bg-warning me-2"> الصكة </span> هي جولة واحدة من
-                            مباراة
-                            كاملة.
+                    <ol>
+                        <li class="mt-2"> <span class=" rounded-3 px-1 text-light bg-warning me-2">
+                                الغش
+                            </span>
+                            هي حالة غير قانونية لا تظهر للفريق الآخر و احيانا لا تظهر للحكم حيث يقوم اللاعب او الفريق
+                            باستخدام إيماءات خفية غير مرئية تساعد الفريق على كسب النقاط.
                         </li>
-                        <li> <span class=" rounded-3 px-1 py-1  text-light bg-warning me-2"> المباراة </span> هي تحدي يقوم
-                            بين
-                            فريقين
-                            ينتهي بكسب أحدهما جولتين من أصل 3
-                            جولات و تسمى
-                            الجولات بـ
-                            (صكة).
-                        </li>
-                        <li>
-                            <span class=" rounded-3 px-1 py-1  text-light bg-warning me-2"> الغش </span> هي حالة غير قانونية
-                            لا
-                            تظهر
-                            للفريق الآخر و احيانا لا تظهر للحكم
-                            حيث يقوم
-                            اللاعب او الفريق
-                            باستخدام إيماءات
-                            خفية غير مرئية تساعد الفريق على كسب النقاط.
-                        </li>
-                        <li>
-                            <span class=" rounded-3 px-1 py-1  text-light bg-warning me-2"> دور </span> هي مجموعة مواجهات
-                        </li>
-                    </ul>
 
+                        <li class="mt-2"> <span class=" rounded-3 px-1 text-light bg-warning me-2">
+                                بطولة الدوري
+                            </span>
+                            هي بطولة يلعب فيها الفرق بمباريات ذهاب وإياب بين كل الفرق (دورين: دور أول، دور ثاني) و يتم حسم
+                            الدوري من خلال جمع اكثر عدد من النقاط.
+
+                        </li>
+                        <li class="mt-2"> <span class=" rounded-3 px-1 text-light bg-warning me-2">
+                                دور
+                            </span>
+                            هي مجموعة مواجهات للفريق حيث يلعب الفريق مع كل الفرق مرة واحدة.
+                        </li>
+                        <li class="mt-2"> <span class=" rounded-3 px-1 text-light bg-warning me-2">
+                                مباراة
+                            </span>
+                            هو تحدي يقوم بين فريقين و يكون التحدي من 3 صكات و الفريق الفائز بصكتين من أصل ثلاث
+                            يصبح فائز بالمباراة. </li>
+                        <li class="mt-2"> <span class=" rounded-3 px-1 text-light bg-warning me-2">
+                                صكة
+                            </span>
+                            هي لعبة بالبلوت كاملة مكونة من جولات تنتهي بفوز أحد الفريقين عند حصوله على 152 بنط.
+                        </li>
+                        <li class="mt-2"> <span class=" rounded-3 px-1 text-light bg-warning me-2">
+                                توضيح اللعب
+                            </span>
+                            هي شيء غير مقصود يتم من خلاله توضيح نوع أحد الكروت مع اللاعب مثل: التردد باللعب أو ضرب الطاولة
+                            وقت التهريب. </li>
+                    </ol>
                 </div>
             </div>
         </div>
