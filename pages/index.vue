@@ -13,7 +13,6 @@
 <script setup lang="ts">
 useHead({ title: "دورى سام للبلوت" })
 const matches = useMatches();
-// console.log(matches);
 
 </script>
 

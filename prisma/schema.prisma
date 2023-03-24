@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,7 +8,19 @@ datasource db {
 }
 
 model Player {
-  id     Int    @id @default(autoincrement())
-  name   String
-  imgUrl String
+  id      Int    @id @default(autoincrement())
+  name    String
+  imageId Int
+  image   Image  @relation(fields: [imageId], references: [id])
+}
+
+model Image {
+  id          Int      @id @default(autoincrement())
+  url         String
+  path        String
+  coordTop    Int
+  coordLeft   Int
+  coordHeight Int
+  coordWidth  Int
+  Player      Player[]
 }

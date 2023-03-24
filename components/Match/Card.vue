@@ -13,9 +13,18 @@
                 <img :src="match.team1.imgUrl" class="team-logo rounded-3" alt="team logo">
                 <p class="mb-0"> {{ match.team1.name }} </p>
             </div>
-            <div class="col-4 text-center ">
+            <div class="col-4 text-center" v-if="match.score.team1 !== '' && match.score.team2 !== ''">
                 <div class="scores">
-                    <p class="mb-0 fs-1 text-warning"> Vs</p>
+                    <p class="mb-0 fs-1 text-warning">
+                        {{ match.score.team1 }} - {{ match.score.team2 }}
+                    </p>
+                </div>
+                <p class="rounded-5 mb-0 bg-secondary text-white">انتهت</p>
+            </div>
+
+            <div class="col-4 text-center" v-else>
+                <div class="scores">
+                    <p class="mb-0 fs-1 text-warning">Vs</p>
                 </div>
                 <p class="border rounded-5 mb-0">لم تبدأ بعد</p>
             </div>

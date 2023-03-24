@@ -26,6 +26,13 @@
 
             </ul>
 
+            <div v-if="user" class="text-center mt-5">
+                <p class="m-0">المستخدم</p>
+                <p>{{ user.email }}</p>
+                <button @click.prevent="handleLogout" class="btn btn-primary" :disabled="loading">تسجيل خروج</button>
+                <p class="text-danger" v-if="error">{{ error }}</p>
+            </div>
+
         </div>
     </div>
 </template>
@@ -41,6 +48,14 @@ onMounted(() => {
 const handleNvigation = (path) => {
     bt_offcanvas.hide()
     navigateTo(path);
+}
+const user = getUser()
+const { error, loading, logout } = useLogout()
+const handleLogout = async () => {
+    await logout();
+    if (!error.value) {
+        handleNvigation("/")
+    }
 }
 </script>
 

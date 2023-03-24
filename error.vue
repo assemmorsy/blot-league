@@ -4,7 +4,6 @@
             <h2>
                 هذه الصفحة غير متاحة حاليا
             </h2>
-
             <img class="img-404" src="@/assets/images/404.svg">
             <button @click="handleError" class="btn btn-secondary w-50 m-auto">
                 العودة للصفحة الرئيسية
@@ -14,6 +13,8 @@
 </template>
 
 <script setup lang="ts">
+const error = useError()
+console.log(error);
 const handleError = () => {
     navigateTo("/")
 }
