@@ -13,13 +13,11 @@ export const useLogin = () => {
             console.error(res.error);
             error.value = res.error.message;
             loading.value = false;
-
         } else {
             error.value = null;
             loading.value = false;
-            console.log(res);
+            // console.log(res);
         }
-        return;
 
     }
     return { error, loading, login }

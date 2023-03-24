@@ -32,6 +32,9 @@
                 <button @click.prevent="handleLogout" class="btn btn-primary" :disabled="loading">تسجيل خروج</button>
                 <p class="text-danger" v-if="error">{{ error }}</p>
             </div>
+            <button type="button" class="btn-info rounded-3 text-white-50" @click="handleNvigation('/admin')">
+                <Icon name="ic:sharp-mode-edit" size="25" />
+            </button>
 
         </div>
     </div>
@@ -60,6 +63,21 @@ const handleLogout = async () => {
 </script>
 
 <style scoped>
+.btn-info {
+
+    height: 2rem;
+    width: 2rem;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .pointer {
     cursor: pointer !important;
     font-size: 1.5em;

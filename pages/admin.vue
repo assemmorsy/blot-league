@@ -13,6 +13,12 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+    title: "صفحة التحكم"
+})
+definePageMeta({
+    name: "admin"
+})
 
 </script>
 

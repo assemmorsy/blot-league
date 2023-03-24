@@ -491,7 +491,14 @@
     </div>
 </template>
 <script setup lang="ts">
-useHead({ title: "قوانين دوري سام للبلوت" })
+useHead({
+    title: "قوانين دوري سام للبلوت"
+})
+definePageMeta({
+    name: "laws"
+})
+
+
 </script>
 
 

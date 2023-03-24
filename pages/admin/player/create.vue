@@ -57,9 +57,13 @@
 import { Cropper } from 'vue-advanced-cropper';
 import 'vue-advanced-cropper/dist/style.css';
 
+useHead({
+    title: "اضافة لاعب جديد"
+})
 definePageMeta({
     name: "create-player"
 })
+const router = useRouter();
 const cropperELm = ref(null);
 const fileElm = ref(null);
 const imageError = ref(null);
@@ -117,13 +121,11 @@ const handleSubmit = async () => {
     player.value.image.path = uploadedImageData.path;
     await create(player.value);
     if (!createError.value) {
-        navigateTo({ name: "all-players" })
+        router.push({ name: "all-players" })
     }
 }
 
-useHead({
-    title: "اضافة لاعب جديد"
-})
+
 </script>
 
 <style scoped>

@@ -38,8 +38,8 @@ export const usePlayer = () => {
             return;
         }
 
-        const { data: createdPlayer, error: PlayerError } = await useFetch("/api/player/create", {
-            method: "POST",
+        const { data: createdPlayer, error: PlayerError } = await useFetch("/api/player", {
+            method: "post",
             body: {
                 name: player.name,
                 imageId: createdImage.value?.id
@@ -60,23 +60,71 @@ export const usePlayer = () => {
         error.value = null; loading.value = false;
         return createdPlayer;
     }
-
-    // const getAllPlayers = async () => {
-    //     error.value = null; loading.value = true;
-    //     try {
-    //         const response = await $fetch("/api/player/all", {
-    //             method: "GET",
-    //         })
-    //         console.log(response);
-    //         error.value = null; loading.value = false;
-    //         return response;
-    //     } catch (err) {
-    //         console.log(err);
-    //         error.value = "تعذر تحميل اللاعبين برجاء المحاولة مرة اخري";
-    //         loading.value = false;
-    //     }
-    // }
-    return {
-        error, loading, create, // getAllPlayers
+    const getAllPlayers = async () => {
+        error.value = null; loading.value = true;
+        try {
+            const response = await $fetch("/api/player/", {
+                method: "GET",
+            })
+            // console.log(response);
+            error.value = null; loading.value = false;
+            return response;
+        } catch (err) {
+            console.log(err);
+            error.value = "تعذر تحميل اللاعبين برجاء المحاولة مرة اخري";
+            loading.value = false;
+        }
     }
+    const remove = async (player: { id: number; imageId: number }) => {
+        error.value = null; loading.value = true;
+        const { data: deletedPlayer, error: deletePlayerError } = await useFetch(`/api/player/${player.id}`, {
+            method: "DELETE",
+        })
+
+        console.log(deletedPlayer);
+
+        if (deletePlayerError.value) {
+            console.log(deletePlayerError.value);
+            error.value = "تعذر حذف اللاعب اللاعب برجاء المحاولة مرة اخري";
+            loading.value = false;
+            return;
+        }
+
+        const { data: deletedImage, error: deleteImageError } = await useFetch(`/api/image/${player.imageId}`, {
+            method: "DELETE",
+        })
+
+        if (deleteImageError.value) {
+            console.log(deleteImageError.value);
+            error.value = "تعذر حذف صورة اللاعب اللاعب برجاء المحاولة مرة اخري";
+            loading.value = false;
+            return;
+        }
+
+        error.value = null; loading.value = false;
+        return { deletedPlayer };
+    }
+    const getPlayer = async (playerId: number) => {
+        error.value = null; loading.value = true;
+        const { data: Player, error: getError } = await useFetch(`/api/player/${playerId}`, {
+            method: "GET",
+        })
+
+        console.log(Player);
+
+        if (getError.value) {
+            console.log(getError.value);
+            error.value = "هذا اللاعب غير موجود!";
+            loading.value = false;
+            return;
+        }
+        error.value = null; loading.value = false;
+        return Player;
+    }
+
+    return {
+        error, loading, create, getAllPlayers, remove, getPlayer
+    }
+
+
 }

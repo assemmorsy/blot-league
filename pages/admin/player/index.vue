@@ -19,11 +19,9 @@
 </template>
 
 <script setup>
-
 definePageMeta({
     name: "all-players",
 })
-
 useHead({
     title: "جميع اللاعبين"
 })

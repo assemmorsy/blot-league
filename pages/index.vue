@@ -11,7 +11,15 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: "دورى سام للبلوت" })
+
+useHead({
+    title: "جدول مباريات دورى سام للبلوت"
+})
+definePageMeta({
+    name: "home"
+})
+
+
 const matches = useMatches();
 
 </script>

@@ -2,25 +2,25 @@ export default defineNuxtRouteMiddleware((to, from) => {
     const user = useSupabaseUser()
     const router = useRouter()
     if (to.path.includes("admin")) {
-        if (user.value) {
+        // console.log("I am in admin ");
+        // console.log(user.value);
+        if (user.value?.aud === "authenticated") {
+            // console.log(" I am also auth ");
             return;
         } else {
-            router.push("/admin").catch((err) => {
-                console.log("================================================");
-                console.log(err);
-                console.log("================================================");
-            })
+            // console.log(" I am not auth ");
+            router.push({ name: "login" })
         }
     } else if (to.path.includes("login") || to.path.includes("signup")) {
-        if (user.value) {
-            router.push("/admin").catch((err) => {
-                console.log("================================================");
-                console.log(err);
-                console.log("================================================");
-            })
-        } else {
-            return;
+        // console.log(" I am in login or sign up ");
+        // console.log(user.value);
 
+        if (user.value?.aud === "authenticated") {
+            // console.log(" I am also auth ");
+            router.push({ name: "admin" })
+        } else {
+            // console.log(" I am not auth ");
+            return;
         }
     }
 })
