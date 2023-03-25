@@ -8,12 +8,12 @@ export const useMatches = () => {
                 ...element,
                 'team1': teams[element.team1Id],
                 'team2': teams[element.team2Id],
-                'startAt': new Date(element.startAt[0], element.startAt[1], element.startAt[2])
+                'startAt': new Date(element.startAt[0], element.startAt[1], element.startAt[2], 23, 59, 0)
             }
         else
             return {
                 ...element,
-                'startAt': new Date(element.startAt[0], element.startAt[1], element.startAt[2])
+                'startAt': new Date(element.startAt[0], element.startAt[1], element.startAt[2], 23, 59, 0)
             }
     });
 }
