@@ -37,8 +37,8 @@
         "team2Id": 6,
         "tournament": 1,
         "score": {
-            "team1": "",
-            "team2": ""
+            "team1": 2,
+            "team2": 0
         },
         "startAt": [
             2023,

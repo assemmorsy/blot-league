@@ -1,5 +1,5 @@
 <template>
-    <div v-if="player" class="container">
+    <div v-if="player && player.image" class="container">
         <div class="d-flex flex-column justify-content-around align-items-center mt-1">
             <h2 class="m-4">{{ player.name }}</h2>
             <img :src="player.image.url" alt="profile image" class="rounded-4 profile-img">
@@ -17,18 +17,27 @@
     <div v-else class="d-flex justify-content-center align-items-center flex-column">
         <h4 class="mt-5">هذا اللاعب غير موجود</h4>
         <Icon name="ic:sharp-search-off" size="150" />
+        {{ playerError }}
     </div>
 </template>
 
 <script setup >
-
-
-const player = ref(null);
 const route = useRoute();
 const { remove: removePlayer, getPlayer, error: playerError, loading: playerLoading } = usePlayer()
 const { remove: removeImage, loading: removeLoading, error: removeError } = useStorage("players");
 
-var _id = route.params.id && Number(route.params.id);
+
+const player = ref(null);
+
+
+onBeforeMount(async () => {
+    var _id = route.params.id && Number(route.params.id);
+    player.value = await getPlayer(_id);
+    console.log((await getPlayer(_id)).value.id);
+
+})
+
+
 const title = computed(() => {
     if (player.value) {
         return `${player.value.name}`
@@ -41,14 +50,7 @@ useHead({
 })
 
 
-if (!_id || isNaN(_id)) {
-    throw createError({
-        statusCode: 400,
-        statusMessage: "Invalid Id Number"
-    })
-} else {
-    player.value = await getPlayer(_id);
-}
+
 const handleDelete = async () => {
     if (confirm(`هل انت متأكد من انك تريد حذف اللاعب : ${player.value.name}`)) {
         await removePlayer(player.value)

@@ -106,11 +106,9 @@ export const usePlayer = () => {
     }
     const getPlayer = async (playerId: number) => {
         error.value = null; loading.value = true;
-        const { data: Player, error: getError } = await useFetch(`/api/player/${playerId}`, {
+        const { data: player, error: getError } = await useFetch(`/api/player/${playerId}`, {
             method: "GET",
         })
-
-        console.log(Player);
 
         if (getError.value) {
             console.log(getError.value);
@@ -118,8 +116,9 @@ export const usePlayer = () => {
             loading.value = false;
             return;
         }
+
         error.value = null; loading.value = false;
-        return Player;
+        return player
     }
 
     return {
