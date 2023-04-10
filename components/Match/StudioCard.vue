@@ -1,18 +1,18 @@
 <template>
-    <div class="card match-card ">
+    <div class="card match-card border-0">
         <div class="background-color">
             <div class="row align-items-center justify-content-between m-2 rounded">
-                <div>
+
+                <div class="col col-2">
                     <Icon name="fxemoji:studiomic" size="50" class="my-2" />
                 </div>
-                <div>
-                    <h5> الاستديو التحليلى للجولة {{ match.tournament }}</h5>
-                    <p class="m-0 fs-4 d-flex align-items-center justify-content-center">
-                        <Icon name="fontisto:date" size="25" class="mx-1 text-secondary" />
+                <div class="col col-9 text-start">
+                    <h6> الاستديو التحليلى للجولة {{ match.tournament }}</h6>
+                    <p class="m-0 fs-6 d-flex align-items-center justify-content-start">
+                        <Icon name="fontisto:date" size="15" class="mx-1 text-secondary" />
                         {{ match.startAt.toLocaleDateString("ar-EG") }}
                     </p>
                 </div>
-
             </div>
         </div>
 
@@ -30,17 +30,12 @@ const props = defineProps(["match"])
     overflow-y: auto;
 }
 
-.row {
-    background-color: white;
-}
+
 
 .background-color {
-    background: #ffb347;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffcc33, #ffb347);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
 
 }
 </style>    

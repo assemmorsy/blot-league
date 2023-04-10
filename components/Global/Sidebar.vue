@@ -4,18 +4,31 @@
             <div>
                 <img class="sidebar-logo rounded-circle " src="@/assets/images/logo.jpg">
                 <h5 class=" offcanvas-title">دورى سام للبلوت </h5>
+                <hr>
             </div>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body mt-0 pt-0">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+                <h6 class="text-center fs-3">جداول الدوري</h6>
+
                 <li class="nav-item ">
                     <a @click="handleNvigation('/')" :class="route.path === '/' ? 'active' : ''"
                         class="nav-link pointer d-flex align-items-center">
                         <Icon name='mdi:table-large' class="nav-item-icon" size="35" />
-                        <span class="mx-2"> جدول المباريات</span>
+                        <span class="mx-2"> مواعيد المباريات</span>
                     </a>
                 </li>
+
+                <li class="nav-item ">
+                    <a @click="handleNvigation('/table')" :class="route.path.includes('/table') ? 'active' : ''"
+                        class="nav-link pointer d-flex align-items-center">
+                        <Icon name='mdi:order-numeric-ascending' class="nav-item-icon" size="35" />
+                        <span class="mx-2"> جدول الترتيب</span>
+                    </a>
+                </li>
+                <hr>
+                <h6 class="text-center fs-3">معلومات عن الدورى</h6>
                 <li class="nav-item">
                     <a @click="handleNvigation('/laws')" :class="route.path.includes('/laws') ? 'active' : ''"
                         class="nav-link pointer d-flex align-items-center ">
@@ -23,18 +36,30 @@
                         <span class="mx-2"> قوانين الدورى</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a @click="handleNvigation('/teams')" :class="route.path.includes('/teams') ? 'active' : ''"
+                        class="nav-link pointer d-flex align-items-center ">
+                        <Icon name='fluent:people-community-20-filled' class="nav-item-icon" size="35" />
+                        <span class="mx-2"> الفرق </span>
+                    </a>
+                </li>
 
+                <!-- <li class="nav-item">
+                    <a @click="handleNvigation('/players')" :class="route.path.includes('/players') ? 'active' : ''"
+                        class="nav-link pointer d-flex align-items-center ">
+                        <Icon name='ic:baseline-person' class="nav-item-icon" size="35" />
+                        <span class="mx-2">اللاعبين </span>
+                    </a>
+                </li> -->
+
+                <!-- <li class="nav-item">
+                    <a @click="handleNvigation('/referees')" :class="route.path.includes('/referees') ? 'active' : ''"
+                        class="nav-link pointer d-flex align-items-center ">
+                        <Icon name='fluent-mdl2:decision-solid' class="nav-item-icon" size="35" />
+                        <span class="mx-2"> الحكام </span>
+                    </a>
+                </li> -->
             </ul>
-
-            <div v-if="user" class="text-center mt-5">
-                <p class="m-0">المستخدم</p>
-                <p>{{ user.email }}</p>
-                <button @click.prevent="handleLogout" class="btn btn-primary" :disabled="loading">تسجيل خروج</button>
-                <p class="text-danger" v-if="error">{{ error }}</p>
-            </div>
-            <button type="button" class="btn-info rounded-3 text-white-50" @click="handleNvigation('/admin')">
-                <Icon name="ic:sharp-mode-edit" size="25" />
-            </button>
 
         </div>
     </div>
@@ -52,17 +77,14 @@ const handleNvigation = (path) => {
     bt_offcanvas.hide()
     navigateTo(path);
 }
-const user = getUser()
-const { error, loading, logout } = useLogout()
-const handleLogout = async () => {
-    await logout();
-    if (!error.value) {
-        handleNvigation("/")
-    }
-}
+
 </script>
 
 <style scoped>
+.offcanvas {
+    border: none;
+}
+
 .btn-info {
 
     height: 2rem;
@@ -85,7 +107,8 @@ const handleLogout = async () => {
 }
 
 .nav-item-icon {
-    color: rgb(43, 42, 42);
+    color: hsl(149, 22%, 30%);
+
 }
 
 

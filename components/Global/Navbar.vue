@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar  sticky-top background-grad ">
+    <nav class="navbar sticky-top background-grad ">
         <div class="container-fluid">
             <NuxtLink class="navbar-brand" to="/">
                 <img class="rounded-circle " style="width:50px;height: 50px;" src="@/assets/images/logo.jpg" alt="">
@@ -25,11 +25,9 @@
 
 <style  scoped>
 .background-grad {
-    background: #FDC830;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #F37335, #FDC830);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #F37335, #FDC830);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 209, 67, 1) 0%, rgba(255, 145, 83, 1) 90%);
+
 }
 </style>

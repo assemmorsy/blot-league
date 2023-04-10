@@ -14,9 +14,10 @@
 
 <script setup lang="ts">
 const error = useError()
-console.log(error);
+console.log(error.value);
 const handleError = () => {
     navigateTo("/")
+
 }
 </script>
 

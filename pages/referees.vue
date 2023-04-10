@@ -1,6 +1,6 @@
 <template>
     <div>
-        player card
+        referees
     </div>
 </template>
 

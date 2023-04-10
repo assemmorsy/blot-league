@@ -503,6 +503,12 @@ definePageMeta({
 
 
 <style  scoped>
+.accordion-header,
+.accordion-item {
+    background-color: #3b3b3b;
+    color: #eee;
+}
+
 .card {
     width: 95%;
     margin: 0.5em auto;

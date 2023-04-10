@@ -6,13 +6,8 @@ export default defineNuxtConfig({
         }
     },
 
-    modules: ["@nuxt/content", "@vueuse/nuxt", "@nuxtjs/supabase", "nuxt-icon"],
+    modules: ["@nuxtjs/strapi", "@nuxt/content", "@vueuse/nuxt", "nuxt-icon"],
 
-    runtimeConfig: {
-        public: {
-            SUPABASE_STORAGE_URL: process.env.SUPABASE_URL
-        }
-    },
 
     css: ["@/assets/css/main.css", "bootstrap/dist/css/bootstrap.rtl.min.css"],
     modulesDir: ['@/node_modules']
