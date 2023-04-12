@@ -1,6 +1,6 @@
 <template>
     <div>
-        referees
+        referees view
     </div>
 </template>
 
