@@ -37,7 +37,10 @@ const orderdMatches = computed(() => {
 onBeforeMount(() => {
     client('/leagues/1/matches', { method: 'GET' })
         .then((data) => {
-            matches.value = data
+            matches.value = data.matches
+            if (matches.value.length === 0) {
+                error.value = "لم يتم العثور على أي مباريات بهذا الدوري"
+            }
         }).catch((err) => {
             console.error(err)
             error.value = "لا توجد مباريات"

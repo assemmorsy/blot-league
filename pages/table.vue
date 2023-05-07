@@ -3,7 +3,7 @@
         <div class="main text-center m-0 p-0" v-if="table && league && !error">
             <div class="league-logo-div">
                 <h3>جدول ترتيب {{ league.name }}</h3>
-                <img class="league-logo" v-if="league.image" :src="url + league.image" alt="League Logo">
+                <img class="league-logo" v-if="league.logo" :src="url + league.logo" alt="League Logo">
                 <table class="table table-striped table-hover mt-2">
                     <tr>
                         <th class="header">
@@ -59,7 +59,11 @@ onBeforeMount(() => {
     client('/leagues/1/summary', { method: 'GET' })
         .then((data) => {
             table.value = data.table
-            league.value = data.league
+            league.value = {
+                id: data.id,
+                name: data.name,
+                logo: data.logo
+            }
         }).catch((err) => {
             console.error(err)
             error.value = "تواجد عطل اثناء تحميل جدول الترتيب "

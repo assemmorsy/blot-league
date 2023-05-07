@@ -1,7 +1,7 @@
 <template>
     <div class="card match-card position-relative" @click.prevent="handleMatchCardClick">
         <div class="row align-items-center justify-content-between background-color  px-2 py-1">
-            <p class=" col col-5  m-0 text-start">الجولة {{ parseInt(match.tournament.name).toLocaleString('ar-Eg') }}</p>
+            <p class=" col col-5  m-0 text-start">الجولة {{ parseInt(match.tournament_name).toLocaleString('ar-Eg') }}</p>
             <div class="col col-2 d-flex justify-content-center align-items-center">
                 <div v-if="match.url" @click.prevent="handleYoutubeClick" style="cursor: pointer;"
                     class="icon-bg d-flex justify-content-center align-items-center">
@@ -18,13 +18,13 @@
 
         <div class="row align-items-center justify-content-center mt-2">
             <div class="col-4 text-center">
-                <img :src="`${url}${match.team_1.logo}`" class="team-logo rounded-3" alt="team logo">
+                <img :src="`${url}${match.team_1_logo}`" class="team-logo rounded-3" alt="team logo">
             </div>
             <div class="col-4 text-center">
-                <div v-if="match.state === 'انتهت' && match.team_1.score !== null && match.team_2.score !== null">
+                <div v-if="match.state === 'انتهت' && match.team_1_score !== null && match.team_2_score !== null">
                     <div class="scores">
                         <p class="mb-0 text-warning" style="font-size: 2.7rem;">
-                            {{ match.team_1.score }} <span class="text-black">-</span> {{ match.team_2.score }}
+                            {{ match.team_1_score }} <span class="text-black">-</span> {{ match.team_2_score }}
                         </p>
                     </div>
                 </div>
@@ -41,19 +41,19 @@
                 </div>
             </div>
             <div class="col-4 text-center">
-                <img :src="`${url}${match.team_2.logo}`" class="team-logo rounded-3" alt="team logo">
+                <img :src="`${url}${match.team_2_logo}`" class="team-logo rounded-3" alt="team logo">
             </div>
         </div>
 
         <div class="row align-items-center justify-content-center mb-3 ">
             <div class="col-4 text-center">
-                <p class="mb-0"> {{ match.team_1.name }} </p>
+                <p class="mb-0"> {{ match.team_1_name }} </p>
             </div>
             <div class="col-4 text-center">
 
             </div>
             <div class="col-4 text-center">
-                <p class="mb-0"> {{ match.team_2.name }} </p>
+                <p class="mb-0"> {{ match.team_2_name }} </p>
             </div>
         </div>
 

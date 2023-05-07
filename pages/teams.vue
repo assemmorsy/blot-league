@@ -21,7 +21,7 @@
                             </span>
                             <br>
                             <span style="font-size:0.75rem ;">
-                                {{ index === 0 ? `كابتن الفريق` : `لاعب بالفريق` }}
+                                {{ player.is_captain ? `كابتن الفريق` : `لاعب بالفريق` }}
                             </span>
                         </p>
                     </div>
@@ -40,10 +40,17 @@ const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url
 const client = useStrapiClient()
 const teams = ref(null)
 const error = ref(null)
+const league = ref(null)
+
 onBeforeMount(() => {
-    client(`/leagues/1/players`, { method: 'GET' })
+    client(`/leagues/1/teams`, { method: 'GET' })
         .then((data) => {
-            teams.value = data
+            teams.value = data.teams
+            league.value = {
+                id: data.id,
+                name: data.name,
+                logo: data.logo
+            }
         }).catch((err) => {
             console.error(err)
             error.value = "حدث عطل اثناء تحميل البيانات !"
