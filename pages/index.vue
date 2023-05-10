@@ -4,8 +4,8 @@
         <hr>
         <div ref="matchCards" class="match-cards mt-0" v-if="matches && matches.length > 0">
             <template v-for="match in orderdMatches" :key="match.id">
-                <MatchCard :match="match" :id="match.id" />
-                <!-- <MatchStudioCard :match="match" :id="match.id" /> -->
+                <MatchStudioCard v-if="match.analysts" :match="match" :id="match.id" />
+                <MatchCard v-else :match="match" :id="match.id" />
             </template>
         </div>
         <div v-else class="text-danger">{{ error }}</div>
@@ -22,13 +22,20 @@ definePageMeta({
 const client = useStrapiClient()
 
 const matches = ref(null)
+const studios = ref(null)
 const error = ref(null)
 const matchCards = ref(null);
 
 const orderdMatches = computed(() => {
-    if (matches.value) {
+    if (matches.value && studios.value) {
+        return [...matches.value, ...studios.value].sort((a, b) => new Date(a.start_at) - new Date(b.start_at))
+    } else if (matches.value) {
         return matches.value.sort((a, b) => new Date(a.start_at) - new Date(b.start_at))
-    } else {
+
+    } else if (studios.value) {
+        return studios.value.sort((a, b) => new Date(a.start_at) - new Date(b.start_at))
+    }
+    else {
         return null
     }
 })
@@ -44,6 +51,17 @@ onBeforeMount(() => {
         }).catch((err) => {
             console.error(err)
             error.value = "لا توجد مباريات"
+        })
+
+    client('/leagues/1/studios', { method: 'GET' })
+        .then((data) => {
+            studios.value = data.studios
+            // if (studios.value.length === 0) {
+            //     // error.value = "لم يتم العثور على أي hs بهذا الدوري"
+            // }
+        }).catch((err) => {
+            console.error(err)
+            // error.value = "لا توجد مباريات"
         })
 })
 
